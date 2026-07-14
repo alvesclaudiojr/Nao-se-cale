@@ -1,0 +1,11 @@
+# Documentos pessoais e arquivos gerados
+*.docx
+*.odt
+Ficha_de_Registro_de_Frequencia_convertida.html
+
+# Arquivos temporarios do sistema/editor
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+

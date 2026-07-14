@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fbf8ff;
+    color: #2f2438;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.topo,
+.hero {
+    background: #efe2ff;
+    padding: 32px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 24px 16px;
+}
+
+.cards,
+.acoes {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card,
+.acoes a {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(70, 30, 100, 0.12);
+    padding: 18px;
+}
+
+.botao,
+.acoes a {
+    color: #ffffff;
+    background: #6c2eb9;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .cards,
+    .acoes {
+        grid-template-columns: 1fr;
+    }
+}
