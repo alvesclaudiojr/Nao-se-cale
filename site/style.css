@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fbf8ff;
+    color: #251333;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(1000px, 92%);
+    margin: 0 auto;
+}
+
+.topo {
+    background: #ead2f8;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.topo h1 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+}
+
+.topo p {
+    margin: 0;
+}
+
+.hero {
+    background: #ead2f8;
+    margin: 28px 0;
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.hero h2,
+.secao h2 {
+    margin-top: 0;
+}
+
+.botao,
+.acoes a {
+    background: #8a00c4;
+    border-radius: 6px;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 700;
+    padding: 12px 18px;
+}
+
+.secao {
+    margin-bottom: 28px;
+}
+
+.cards,
+.acoes {
+    display: grid;
+    gap: 16px;
+}
+
+.cards {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(55, 20, 75, 0.12);
+    padding: 22px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.acoes {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.acoes a {
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .cards,
+    .acoes {
+        grid-template-columns: 1fr;
+    }
+
+    .topo {
+        padding: 28px 0;
+    }
+
+    .hero {
+        margin: 20px 0;
+        padding: 28px 18px;
+        text-align: left;
+    }
+
+    .topo h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero h2,
+    .secao h2 {
+        font-size: 1.35rem;
+    }
+
+    .botao,
+    .acoes a {
+        width: 100%;
+        text-align: center;
+    }
+}
