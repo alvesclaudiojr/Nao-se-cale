@@ -4,10 +4,23 @@
 
 body {
     margin: 0;
-    background: #fbf8ff;
+    background: #fdf9ff;
     color: #251333;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    background:
+        linear-gradient(90deg, rgba(253, 249, 255, 0.7), rgba(253, 249, 255, 0.9)),
+        url("assets/fundo-acolhedor.png") center/cover fixed;
+    content: "";
+    filter: blur(3px);
+    inset: -8px;
+    position: fixed;
+    z-index: -1;
 }
 
 a {
@@ -15,55 +28,157 @@ a {
 }
 
 .container {
-    width: min(1000px, 92%);
+    width: min(1120px, 92%);
     margin: 0 auto;
 }
 
 .topo {
-    background: #ead2f8;
-    padding: 40px 0;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(216, 198, 230, 0.7);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
-.topo h1 {
-    margin: 0 0 10px;
-    font-size: 2rem;
+.topo-conteudo {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
 }
 
-.topo p {
-    margin: 0;
+.marca {
+    color: #4b176d;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 16px;
+}
+
+nav a {
+    color: #4b176d;
+    font-weight: 700;
 }
 
 .hero {
-    background: #ead2f8;
-    margin: 28px 0;
-    padding: 40px 24px;
-    text-align: center;
+    align-items: center;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(237, 210, 248, 0.9)),
+        linear-gradient(90deg, rgba(95, 22, 133, 0.08), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(234, 220, 243, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 18px 42px rgba(55, 20, 75, 0.12);
+    display: grid;
+    gap: 36px;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    margin: 42px 0 40px;
+    overflow: hidden;
+    min-height: 390px;
+    padding: 58px 48px;
+    position: relative;
 }
 
-.hero h2,
+.hero::before {
+    background: rgba(95, 22, 133, 0.12);
+    content: "";
+    height: 150%;
+    position: absolute;
+    right: -180px;
+    top: -120px;
+    transform: rotate(18deg);
+    width: 360px;
+}
+
+.hero-texto,
+.aviso {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1,
 .secao h2 {
     margin-top: 0;
 }
 
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 14px;
+}
+
+.etiqueta {
+    color: #6c238f;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
 .botao,
-.acoes a {
-    background: #8a00c4;
+.acao {
+    background: #7a159e;
     border-radius: 6px;
     color: #ffffff;
     display: inline-block;
     font-weight: 700;
-    padding: 12px 18px;
+    padding: 14px 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botao:hover,
+.acao:hover {
+    box-shadow: 0 10px 22px rgba(95, 22, 133, 0.18);
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    background: #ffffff;
+    color: #6f168f;
+}
+
+.aviso {
+    background: rgba(255, 255, 255, 0.92);
+    border-left: 5px solid #7a159e;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(55, 20, 75, 0.1);
+    padding: 24px;
+}
+
+.aviso strong,
+.aviso span {
+    display: block;
+}
+
+.aviso strong {
+    margin-bottom: 6px;
 }
 
 .secao {
-    margin-bottom: 28px;
+    margin-bottom: 42px;
+}
+
+.secao h2 {
+    font-size: 1.65rem;
+    margin-bottom: 22px;
 }
 
 .cards,
 .acoes {
     display: grid;
-    gap: 16px;
+    gap: 20px;
 }
 
 .cards {
@@ -71,52 +186,127 @@ a {
 }
 
 .card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(234, 220, 243, 0.7);
+    border-top: 4px solid #d5b4eb;
     border-radius: 8px;
-    box-shadow: 0 6px 16px rgba(55, 20, 75, 0.12);
-    padding: 22px;
+    box-shadow: 0 12px 28px rgba(55, 20, 75, 0.1);
+    min-height: 220px;
+    padding: 30px 26px;
+}
+
+.card span {
+    color: #8a00c4;
+    font-size: 0.85rem;
+    font-weight: 700;
 }
 
 .card h3 {
-    margin-top: 0;
+    font-size: 1.22rem;
+    margin-top: 8px;
 }
 
 .acoes {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.acoes a {
-    text-align: center;
+.acao {
+    align-items: center;
+    box-shadow: 0 10px 24px rgba(55, 20, 75, 0.14);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 110px;
+}
+
+.acao strong,
+.acao span {
+    display: block;
+}
+
+.acao span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.acao.destaque {
+    background: #4f146d;
+}
+
+.texto-apoio {
+    max-width: 820px;
+}
+
+.cabecalho-secao {
+    align-items: end;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.painel-ajuda {
+    background: rgba(255, 255, 255, 0.62);
+    border: 1px solid rgba(234, 220, 243, 0.75);
+    border-radius: 8px;
+    box-shadow: 0 14px 34px rgba(55, 20, 75, 0.08);
+    padding: 30px;
+}
+
+.bloco-orientacao {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(234, 220, 243, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(55, 20, 75, 0.1);
+    padding: 30px;
 }
 
 @media (max-width: 760px) {
-    .cards,
-    .acoes {
-        grid-template-columns: 1fr;
+    .topo-conteudo,
+    nav,
+    .botoes {
+        align-items: stretch;
+        flex-direction: column;
     }
 
-    .topo {
-        padding: 28px 0;
+    nav {
+        gap: 8px;
+    }
+
+    .cards,
+    .acoes,
+    .hero {
+        grid-template-columns: 1fr;
     }
 
     .hero {
         margin: 20px 0;
-        padding: 28px 18px;
-        text-align: left;
+        min-height: auto;
+        padding: 28px 20px;
     }
 
-    .topo h1 {
-        font-size: 1.7rem;
+    .hero::before {
+        height: 260px;
+        right: -240px;
+        top: auto;
+        bottom: -150px;
     }
 
-    .hero h2,
+    .hero h1 {
+        font-size: 2rem;
+    }
+
     .secao h2 {
         font-size: 1.35rem;
     }
 
     .botao,
-    .acoes a {
+    .acao {
         width: 100%;
         text-align: center;
+    }
+
+    .acao {
+        min-height: auto;
     }
 }
