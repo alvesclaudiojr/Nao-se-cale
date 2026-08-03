@@ -8,59 +8,92 @@
 </head>
 <body>
     <header class="topo">
-        <div class="container">
-            <h1>Não Se Cale</h1>
-            <p>Projeto acadêmico sobre conscientização e combate à violência doméstica.</p>
+        <div class="container topo-conteudo">
+            <a class="marca" href="#">Não Se Cale</a>
+            <nav aria-label="Navegação principal">
+                <a href="#informacoes">Informações</a>
+                <a href="#apoio">Ajuda</a>
+            </nav>
         </div>
     </header>
 
     <main class="container">
         <section class="hero">
-            <h2>Informação e apoio podem salvar vidas</h2>
-            <p>
-                Conheça sinais de alerta, veja formas de denunciar
-                e encontre canais de apoio para buscar orientação.
-            </p>
-            <a class="botao" href="#apoio">Ver canais de apoio</a>
+            <div class="hero-texto">
+                <p class="etiqueta">Projeto acadêmico de extensão</p>
+                <h1>Informação e apoio podem salvar vidas</h1>
+                <p>
+                    Conheça sinais de alerta, veja formas de denunciar
+                    e encontre canais de apoio para buscar orientação.
+                </p>
+                <div class="botoes">
+                    <a class="botao botao-principal" href="tel:190">Ligar 190</a>
+                    <a class="botao botao-secundario" href="#apoio">Ver canais de apoio</a>
+                </div>
+            </div>
+
+            <aside class="aviso">
+                <strong>Risco imediato?</strong>
+                <span>Ligue 190 e procure um local seguro.</span>
+            </aside>
         </section>
 
-        <section class="secao">
+        <section class="secao" id="informacoes">
             <h2>Informações principais</h2>
 
             <div class="cards">
                 <article class="card">
+                    <span>01</span>
                     <h3>Tipos de Violência</h3>
                     <p>Física, psicológica, moral, sexual, patrimonial e outras formas de violência.</p>
                 </article>
 
                 <article class="card">
+                    <span>02</span>
                     <h3>Sinais de Alerta</h3>
                     <p>Medo excessivo, isolamento, lesões sem explicação, ameaças e controle constante.</p>
                 </article>
 
                 <article class="card">
+                    <span>03</span>
                     <h3>Rede de Apoio</h3>
                     <p>CRAS, CREAS, Polícia Militar, Polícia Civil, saúde pública e organizações sociais.</p>
                 </article>
             </div>
         </section>
 
-        <section class="secao" id="apoio">
-            <h2>Precisa de ajuda?</h2>
-            <p>
-                Os canais Disque 100 e 180 são gratuitos, confidenciais e funcionam 24 horas por dia.
-                Em situação de risco imediato, ligue 190.
-            </p>
+        <section class="secao painel-ajuda" id="apoio">
+            <div class="cabecalho-secao">
+                <div>
+                    <h2>Precisa de ajuda?</h2>
+                    <p class="texto-apoio">
+                        Os canais Disque 100 e 180 são gratuitos, confidenciais e funcionam 24 horas por dia.
+                        Em situação de risco imediato, ligue 190.
+                    </p>
+                </div>
+            </div>
 
             <div class="acoes">
-                <a href="tel:190">Ligar 190</a>
-                <a href="tel:180">Ligar 180</a>
-                <a href="tel:100">Ligar 100</a>
-                <a href="mailto:atendimento@exemplo.com.br">Enviar e-mail</a>
+                <a class="acao destaque" href="tel:190">
+                    <strong>Ligar 190</strong>
+                    <span>Emergência policial</span>
+                </a>
+                <a class="acao" href="tel:180">
+                    <strong>Ligar 180</strong>
+                    <span>Atendimento à mulher</span>
+                </a>
+                <a class="acao" href="tel:100">
+                    <strong>Ligar 100</strong>
+                    <span>Direitos humanos</span>
+                </a>
+                <a class="acao" href="mailto:atendimento@exemplo.com.br">
+                    <strong>Enviar e-mail</strong>
+                    <span>atendimento@exemplo.com.br</span>
+                </a>
             </div>
         </section>
 
-        <section class="secao">
+        <section class="secao bloco-orientacao">
             <h2>Como ajudar na denúncia</h2>
             <p>
                 Sempre que possível, informe local, data, nome das pessoas envolvidas
