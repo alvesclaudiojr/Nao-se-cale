@@ -364,6 +364,117 @@ nav a {
     padding: 30px;
 }
 
+.botao-contraste,
+.sair-rapido {
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.botao-contraste {
+    background: #f3e5fb;
+    color: #4b176d;
+    padding: 10px 14px;
+}
+
+.sair-rapido {
+    background: #4f146d;
+    bottom: 18px;
+    box-shadow: 0 12px 28px rgba(55, 20, 75, 0.2);
+    color: #ffffff;
+    padding: 12px 16px;
+    position: fixed;
+    right: 18px;
+    z-index: 4;
+}
+
+.alto-contraste {
+    background: #17121d;
+    color: #e8e1ec;
+}
+
+.alto-contraste::before {
+    background:
+        linear-gradient(rgba(18, 13, 24, 0.92), rgba(18, 13, 24, 0.96)),
+        url("assets/fundo-acolhedor.png") center/cover fixed;
+    display: block;
+    filter: blur(8px) brightness(0.45) saturate(0.6);
+}
+
+.alto-contraste .topo,
+.alto-contraste .hero,
+.alto-contraste .card,
+.alto-contraste .bloco-conteudo,
+.alto-contraste .tipos-violencia,
+.alto-contraste .lista-tipos article,
+.alto-contraste .painel-ajuda,
+.alto-contraste .bloco-orientacao,
+.alto-contraste .aviso,
+.alto-contraste .pontos-info article {
+    background: rgba(28, 21, 36, 0.92);
+    border-color: rgba(212, 188, 228, 0.25);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+}
+
+.alto-contraste .hero::before {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.alto-contraste a,
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste strong,
+.alto-contraste .etiqueta,
+.alto-contraste .card span,
+.alto-contraste .marca {
+    color: #f3edf7;
+}
+
+.alto-contraste p,
+.alto-contraste span {
+    color: #d8ccdf;
+}
+
+.alto-contraste .marca img,
+.alto-contraste .etiqueta {
+    filter: grayscale(1) brightness(0.8);
+    opacity: 0.62;
+}
+
+.alto-contraste nav a[href="#violencia-domestica"],
+.alto-contraste nav a[href="#tipos"] {
+    opacity: 0.72;
+}
+
+.alto-contraste .card,
+.alto-contraste .lista-tipos article,
+.alto-contraste .pontos-info article {
+    opacity: 0.88;
+}
+
+.alto-contraste .card span,
+.alto-contraste .lista-tipos h3,
+.alto-contraste .pontos-info strong {
+    color: #d9c7e6;
+}
+
+.alto-contraste .botao,
+.alto-contraste .acao,
+.alto-contraste .sair-rapido {
+    background: #2b2034;
+    color: #ffffff;
+}
+
+.alto-contraste .botao-secundario,
+.alto-contraste .botao-contraste {
+    background: #211829;
+    border: 1px solid rgba(232, 214, 242, 0.35);
+    color: #ffffff;
+}
+
 @media (max-width: 760px) {
     .topo-conteudo,
     nav,
@@ -412,8 +523,16 @@ nav a {
     }
 
     .botao,
-    .acao {
+    .acao,
+    .botao-contraste {
         width: 100%;
+        text-align: center;
+    }
+
+    .sair-rapido {
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
         text-align: center;
     }
 
